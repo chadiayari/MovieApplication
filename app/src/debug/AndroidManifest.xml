@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.chadi.movieapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application tools:ignore="GoogleAppIndexingWarning"
+        android:fullBackupContent="true">
+        <activity android:name="com.chadi.movieapp.testing.SingleFragmentActivity"/>
+    </application>
+
+</manifest>

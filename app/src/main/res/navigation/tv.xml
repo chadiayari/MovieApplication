@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv"
+    app:startDestination="@+id/tvsFragment">
+
+    <fragment
+        android:id="@+id/tvsFragment"
+        android:name="com.chadi.movieapp.view.ui.tv.tvlist.TvListFragment"
+        android:label="tvsFragment"
+        tools:layout="@layout/fragment_tvs">
+        <action
+            android:id="@+id/action_tvs_to_tvDetail"
+            app:destination="@id/tvDetail" />
+        <action
+            android:id="@+id/action_tvsFragment_to_tvSearchFragment"
+            app:destination="@id/tvSearchFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/tvDetail"
+        android:name="com.chadi.movieapp.view.ui.tv.tvdetail.TvDetailFragment"
+        android:label="tvDetail"
+        tools:layout="@layout/fragment_tv_detail">
+        <argument
+            android:name="tv"
+            app:argType="com.chadi.movieapp.models.entity.Tv" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tvSearchFragment"
+        android:name="com.chadi.movieapp.view.ui.search.TvSearchFragment"
+        android:label="tvSearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_tvSearchFragment_to_tvDetail"
+            app:destination="@id/tvDetail" />
+
+        <action
+            android:id="@+id/action_tvSearchFragment_to_tvsFragment"
+            app:popUpTo="@id/tvsFragment" />
+
+        <action
+            android:id="@+id/action_tvSearchFragment_to_tvSearchFragmentResult"
+            app:destination="@id/tvSearchFragmentResult" />
+        <action
+            android:id="@+id/action_tvSearchFragment_to_tvSearchFragmentResultFilter"
+            app:destination="@id/tvSearchFragmentResultFilter" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/tvSearchFragmentResult"
+        android:name="com.chadi.movieapp.view.ui.search.result.TvSearchResultFragment"
+        android:label="tvSearchFragmentResult" >
+        <action
+            android:id="@+id/action_tvSearchFragmentResult_to_tvSearchFragment"
+            app:popUpTo="@id/tvSearchFragment" />
+        <action
+            android:id="@+id/action_tvSearchFragmentResult_to_tvDetail"
+            app:destination="@id/tvDetail" />
+
+        <argument
+            android:name="query"
+            app:argType="string" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/tvSearchFragmentResultFilter"
+        android:name="com.chadi.movieapp.view.ui.search.filter.TvSearchResultFilterFragment"
+        android:label="tvSearchFragmentResultFilter"
+        tools:layout="@layout/fragment_search_filter">
+
+        <action
+            android:id="@+id/action_tvSearchFragmentResultFilter_to_tvDetail"
+            app:destination="@id/tvDetail" />
+        <action
+            android:id="@+id/action_tvSearchFragmentResultFilter_to_tvSearchFragment"
+            app:popUpTo="@id/tvSearchFragment" />
+    </fragment>
+
+
+</navigation>

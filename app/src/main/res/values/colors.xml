@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFC900</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="itemsColor">#FFFFFF</color>
+    <color name="tabItemsColor">#DADADA</color>
+    <color name="background">#ffffff</color>
+    <color name="background800">#DCDCDC</color>
+    <color name="preview">#b0abb0</color>
+    <color name="white">#000000</color>
+    <color name="blueClearColor">#006CB3</color>
+    <color name="tabTextColor">#A2A3A3</color>
+    <color name="clearFilterColor">#A2A3A3</color>
+    <color name="backgroundDarker">#8C8C8C</color>
+</resources>
